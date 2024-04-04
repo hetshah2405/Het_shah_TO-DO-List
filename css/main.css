@@ -1,0 +1,88 @@
+body {
+    background-color: black;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+main {
+    display: flex;  
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header > h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+section {
+    width: 400px;
+    border: 4px solid #fff;
+    border-radius: 8px;
+    margin: 10px 12px; 
+}
+
+section > h2 {
+    color: rgb(19, 164, 208);
+    padding: 4px 8px;
+}
+
+#todo > h2::after,
+#inprogress > h2::after,
+#done > h2::after {
+    content: "👻";
+    margin-left: 5px;
+}
+
+#todo > h2::after {
+    content: "😃";
+}
+
+.todo input[type="checkbox"]:checked + label::after {
+    content: "🤡";
+    margin-left: 5px;
+}
+.inprogress input[type="checkbox"]:checked + label::after {
+    content: "😱";
+    margin-left: 5px;
+}
+
+.done input[type="checkbox"]:checked + label::after {
+    content: "🥳";
+    margin-left: 5px;
+}
+
+footer h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    color: white;
+    font-size: 30px;
+    line-height: 25px;
+    object-position: bottom;
+    padding-top: 10%;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 6px 8px;
+    text-transform: uppercase;
+}
+
+.todo li:nth-child(odd) {
+    background-color: rgba(24, 155, 195, 0.955);
+}
+
+.inprogress li:nth-child(odd) {
+    background-color: rgba(246, 255, 0, 0.5);
+}
+
+.done li:nth-child(odd) {
+    background-color: rgba(0, 255, 0, 0.5);
+}
